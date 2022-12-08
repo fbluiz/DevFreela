@@ -1,0 +1,7 @@
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev API\obj\Debug\net6.0\iDev API.csproj.AssemblyReference.cache
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev API\obj\Debug\net6.0\iDev API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev API\obj\Debug\net6.0\iDev API.AssemblyInfoInputs.cache
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev API\obj\Debug\net6.0\iDev API.AssemblyInfo.cs
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev API\obj\Debug\net6.0\iDev API.csproj.CoreCompileInputs.cache
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev API\obj\Debug\net6.0\iDev API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev API\obj\Debug\net6.0\iDev API.MvcApplicationPartsAssemblyInfo.cache

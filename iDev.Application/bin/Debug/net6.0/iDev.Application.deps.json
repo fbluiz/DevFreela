@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "iDev.Application/1.0.0": {
+        "dependencies": {
+          "iDev.Core": "1.0.0",
+          "iDev.Infra": "1.0.0"
+        },
+        "runtime": {
+          "iDev.Application.dll": {}
+        }
+      },
+      "iDev.Core/1.0.0": {
+        "runtime": {
+          "iDev.Core.dll": {}
+        }
+      },
+      "iDev.Infra/1.0.0": {
+        "dependencies": {
+          "iDev.Core": "1.0.0"
+        },
+        "runtime": {
+          "iDev.Infra.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "iDev.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "iDev.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "iDev.Infra/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

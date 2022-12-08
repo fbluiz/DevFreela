@@ -1,0 +1,15 @@
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev.Infra\bin\Debug\net6.0\iDev.Infra.deps.json
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev.Infra\bin\Debug\net6.0\iDev.Infra.dll
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev.Infra\bin\Debug\net6.0\iDev.Infra.pdb
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev.Infra\bin\Debug\net6.0\iDev.Core.dll
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev.Infra\bin\Debug\net6.0\iDev.Core.pdb
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev.Infra\obj\Debug\net6.0\iDev.Infra.csproj.AssemblyReference.cache
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev.Infra\obj\Debug\net6.0\iDev.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev.Infra\obj\Debug\net6.0\iDev.Infra.AssemblyInfoInputs.cache
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev.Infra\obj\Debug\net6.0\iDev.Infra.AssemblyInfo.cs
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev.Infra\obj\Debug\net6.0\iDev.Infra.csproj.CoreCompileInputs.cache
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev.Infra\obj\Debug\net6.0\iDev.Infra.csproj.CopyComplete
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev.Infra\obj\Debug\net6.0\iDev.Infra.dll
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev.Infra\obj\Debug\net6.0\refint\iDev.Infra.dll
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev.Infra\obj\Debug\net6.0\iDev.Infra.pdb
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev.Infra\obj\Debug\net6.0\ref\iDev.Infra.dll
