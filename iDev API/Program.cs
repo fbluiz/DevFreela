@@ -2,6 +2,7 @@ using iDev.Application.Services.Interfaces;
 using iDev.Application.Services.Implementations;
 
 using iDev.Infra.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +12,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton<IDevDbContext>();
+
+var connectionString = builder.Configuration.GetConnectionString("iDevCs");
+builder.Services.AddDbContext<IDevDbContext>(options => options.UseSqlServer(connectionString));
+
 builder.Services.AddScoped<IProjectService, ProjectService>();
 
 var app = builder.Build();

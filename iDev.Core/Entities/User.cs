@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace iDev.Core.Entities
 {
-    public class User
+    public class User : BaseEntity
     {
         public User(string fullName, string email, DateTime birthDate)
         {
@@ -30,5 +30,6 @@ namespace iDev.Core.Entities
         public List<UserSkill> Skills { get; private set; }
         public List<Project> OwnedProjects { get; private set; }
         public List<Project> FreeLanceProjects { get; private set; }
+        public List<ProjectComment> Comments { get; private set; }
     }
 }

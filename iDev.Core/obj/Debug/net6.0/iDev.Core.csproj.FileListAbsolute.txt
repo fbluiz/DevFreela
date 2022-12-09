@@ -10,3 +10,5 @@ C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev.Core\obj\Debug\net6.0
 C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev.Core\obj\Debug\net6.0\refint\iDev.Core.dll
 C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev.Core\obj\Debug\net6.0\iDev.Core.pdb
 C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev.Core\obj\Debug\net6.0\ref\iDev.Core.dll
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev.Core\bin\Debug\net6.0\iDev.Core.runtimeconfig.json
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev.Core\obj\Debug\net6.0\iDev.Core.genruntimeconfig.cache

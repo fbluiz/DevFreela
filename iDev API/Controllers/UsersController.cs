@@ -1,18 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using iDev.Application.InputModels;
+using iDev.Application.Services.Interfaces;
+using iDev.Core.Entities;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DevFreela.API.Controllers
 {
-    [Route("api/users")]
+    [Route("api/Users")]
     public class UsersController : ControllerBase
     {
         private readonly IUserService _userService;
+
         public UsersController(IUserService userService)
         {
             _userService = userService;
         }
 
-        // api/users/1
-        [HttpGet("{id}")]
+        [HttpGet]
+        [Route("{id}")]
         public IActionResult GetById(int id)
         {
             var user = _userService.GetUser(id);
@@ -25,22 +29,13 @@ namespace DevFreela.API.Controllers
             return Ok(user);
         }
 
-        // api/users
         [HttpPost]
-        public IActionResult Post([FromBody] CreateUserInputModel inputModel)
+        public IActionResult CreateUser([FromBody] CreateUserInputModel inputModel)
         {
             var id = _userService.Create(inputModel);
 
             return CreatedAtAction(nameof(GetById), new { id = id }, inputModel);
         }
 
-        // api/users/1/login
-        [HttpPut("{id}/login")]
-        public IActionResult Login(int id, [FromBody] LoginModel login)
-        {
-            // TODO: Para Módulo de Autenticação e Autorização
-
-            return NoContent();
-        }
     }
 }
