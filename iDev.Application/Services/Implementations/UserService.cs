@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace iDev.Application.Services.Implementations
 {
-    internal class UserService : IUserService
+    public class UserService : IUserService
     {
 
         private readonly IDevDbContext _dbcontext;

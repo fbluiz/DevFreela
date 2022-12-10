@@ -17,6 +17,6 @@ namespace iDev.Application.Services.Interfaces
         void Delete(int id);
         void CreateComment(CreateCommentInputModel inputModel);
         void Start(int id);
-        void finish(int id); 
+        void Finish(int id); 
     }
 }

@@ -106,7 +106,7 @@ namespace iDev.Application.Services.Implementations
             }
         }
 
-        public void finish(int id)
+        public void Finish(int id)
         {
             var project = _dbContext.Projects.SingleOrDefault(p => p.Id == id);
 

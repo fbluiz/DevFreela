@@ -86,3 +86,7 @@ C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev API\bin\Debug\net6.0\
 C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev API\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev API\bin\Debug\net6.0\System.Text.Json.dll
 C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev API\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev API\bin\Debug\net6.0\Dapper.dll
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev API\bin\Debug\net6.0\MediatR.dll
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev API\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev API\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

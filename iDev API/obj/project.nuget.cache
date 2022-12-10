@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4/LFShtZ3AvDZAMzHg+DyZIG7bcECeMnpKMk1vw++SJQBK5iZV3iEZ5fxavccP2kr+ULDwGyusqc0rptJMxBsQ==",
+  "dgSpecHash": "hQZ6RgDekWeWTVfJHVMogxGsOSkF4zA3V93lB3UcdGwXb+FmnZoKCt96qlOmsO/t9i8u6er1UnlVQuEft+N4Ow==",
   "success": true,
   "projectFilePath": "C:\\Users\\brson\\Documents\\VPProjects\\iDev API\\iDev API\\iDev API\\iDev API.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,9 @@
     "C:\\Users\\brson\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\brson\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\brson\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\brson\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
+    "C:\\Users\\brson\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\brson\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\brson\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\brson\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\brson\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",
