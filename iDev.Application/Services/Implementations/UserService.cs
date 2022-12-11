@@ -3,11 +3,6 @@ using iDev.Application.Services.Interfaces;
 using iDev.Application.ViewModels;
 using iDev.Core.Entities;
 using iDev.Infra.Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace iDev.Application.Services.Implementations
 {

@@ -20,39 +20,6 @@ namespace iDev.Application.Services.Implementations
             _dbContext = dbContext;
             _connectionString = configuration.GetConnectionString("DevFreelaCs");
         }
-        public List<ProjectViewModel> GetAll(string query)
-        {
-            var projects = _dbContext.Projects;
-
-            var projectsViewModel = projects
-                .Select(p => new ProjectViewModel(p.Id, p.Title, p.CreatedAt))
-                .ToList();
-
-            return projectsViewModel;
-        }
-
-        public ProjectDetailsViewModel GetById(int id)
-        {
-            var project = _dbContext.Projects
-                .Include(p => p.FreeLancer)
-                .Include(p => p.Client)
-                .SingleOrDefault(p => p.Id == id);
-
-            if (project == null) return null;
-
-            var projectDetailsViewModel = new ProjectDetailsViewModel(
-                project.Id,
-                project.Title,
-                project.Description,
-                project.TotalCost,
-                project.StartedAt,
-                project.FinishedAt,
-                project.Client.FullName,
-                project.FreeLancer.FullName);
-
-            return projectDetailsViewModel;
-        }
-
        
 
         public int Create(NewProjectInputModel inputModel)
