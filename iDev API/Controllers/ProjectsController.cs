@@ -9,7 +9,6 @@ using iDev.Application.Queries.GetAllProjects;
 using iDev.Application.Queries.GetProjectById;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 
 namespace DevFreela.API.Controllers

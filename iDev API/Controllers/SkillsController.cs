@@ -1,5 +1,4 @@
 ﻿using iDev.Application.Queries.GetAllSkills;
-using iDev.Application.Services.Interfaces;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

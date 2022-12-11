@@ -1,13 +1,8 @@
-﻿using iDev.Application.Services.Interfaces;
-using iDev.Application.ViewModels;
+﻿using iDev.Application.ViewModels;
 using iDev.Infra.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace iDev.Application.Queries.GetUser
 {
