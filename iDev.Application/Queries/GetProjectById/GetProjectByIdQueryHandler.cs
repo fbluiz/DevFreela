@@ -1,4 +1,5 @@
 ﻿using iDev.Application.ViewModels;
+using iDev.Core.Repositories;
 using iDev.Infra.Persistence;
 using MediatR;
 using System;
@@ -11,16 +12,16 @@ namespace iDev.Application.Queries.GetProjectById
 {
     internal class GetProjectByIdQueryHandler : IRequestHandler<GetProjectByIdQuery, ProjectDetailsViewModel>
     {
-        private readonly IDevDbContext _dbcontext;
+        private readonly IProjectRepository _projectrepository;
 
-        public GetProjectByIdQueryHandler(IDevDbContext dbcontext)
+        public GetProjectByIdQueryHandler(IProjectRepository projectrepository)
         {
-            _dbcontext = dbcontext;
+            _projectrepository = projectrepository;
         }
 
         public async Task<ProjectDetailsViewModel> Handle(GetProjectByIdQuery request, CancellationToken cancellationToken)
         {
-            var project =  _dbcontext.Projects.SingleOrDefault(p => p.Id == request.Id);
+            var project = await _projectrepository.GetByIdAsync(request.Id);
 
             if(project == null) return null;
 

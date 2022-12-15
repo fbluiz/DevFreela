@@ -1,4 +1,5 @@
 ﻿using iDev.Core.Entities;
+using iDev.Core.Repositories;
 using iDev.Infra.Persistence;
 using MediatR;
 using System;
@@ -11,18 +12,18 @@ namespace iDev.Application.Commands.CreateComment
 {
     public class CreateCommentCommandHandler : IRequestHandler<CreateCommentCommand, Unit>
     {
-        private readonly IDevDbContext _dbContext;
-        public CreateCommentCommandHandler(IDevDbContext dbContext)
+        readonly private IProjectRepository _projectRepository;
+
+        public CreateCommentCommandHandler(IProjectRepository projectRepository)
         {
-            _dbContext = dbContext;
+            _projectRepository = projectRepository;
         }
 
         public async Task<Unit> Handle(CreateCommentCommand request, CancellationToken cancellationToken)
         {
             var comment = new ProjectComment(request.Content,request.IdProject,request.IdUser);
 
-            await _dbContext.ProjectComments.AddAsync(comment);
-            await _dbContext.SaveChangesAsync();
+           await _projectRepository.AddCommentAsync(comment);
 
             return Unit.Value;
         }

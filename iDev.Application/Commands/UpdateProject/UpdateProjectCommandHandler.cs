@@ -1,4 +1,5 @@
 ﻿using iDev.Application.Commands.UpdateProject;
+using iDev.Core.Repositories;
 using iDev.Infra.Persistence;
 using MediatR;
 
@@ -6,19 +7,19 @@ namespace iDev.Application.Commands.UpdateProject
 {
     public class UpdateProjectCommandHandler : IRequestHandler<UpdateProjectCommand, Unit>
     {
-        private readonly IDevDbContext _dbContext;
-        public UpdateProjectCommandHandler(IDevDbContext dbContext)
+        private readonly IProjectRepository _projectRepository;
+        public UpdateProjectCommandHandler(IProjectRepository projectRepository)
         {
-            _dbContext = dbContext;
+            _projectRepository = projectRepository;
         }
 
         public async Task<Unit> Handle(UpdateProjectCommand request, CancellationToken cancellationToken)
         {
-            var project = _dbContext.Projects.SingleOrDefault(p => p.Id == request.Id);
+            var project = await _projectRepository.GetByIdAsync(request.Id);
 
             project.Update(request.Title, request.Description, request.TotalCost);
 
-            await _dbContext.SaveChangesAsync();
+            await _projectRepository.SaveChangesAsync();
 
             return Unit.Value;
         }

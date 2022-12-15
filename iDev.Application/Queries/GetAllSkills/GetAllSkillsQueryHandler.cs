@@ -1,5 +1,7 @@
 ﻿using Dapper;
 using iDev.Application.ViewModels;
+using iDev.Core.DTOs;
+using iDev.Core.Repositories;
 using iDev.Infra.Persistence;
 using MediatR;
 using Microsoft.Data.SqlClient;
@@ -12,34 +14,19 @@ using System.Threading.Tasks;
 
 namespace iDev.Application.Queries.GetAllSkills
 {
-    public class GetAllSkillsQueryHandler : IRequestHandler<GetAllSkillsQuery, List<SkillViewModel>>
+    public class GetAllSkillsQueryHandler : IRequestHandler<GetAllSkillsQuery, List<SkillDTO>>
     {
-        private readonly string _connectionString;
-        public GetAllSkillsQueryHandler(IConfiguration configuration)
+        private readonly ISkillRepository _skillrepository;
+
+        public GetAllSkillsQueryHandler(ISkillRepository skillrepository)
         {
-            _connectionString = configuration.GetConnectionString("iDevCs");
+            _skillrepository = skillrepository;
         }
-        public async Task<List<SkillViewModel>> Handle(GetAllSkillsQuery request, CancellationToken cancellationToken)
+
+        public async Task<List<SkillDTO>> Handle(GetAllSkillsQuery request, CancellationToken cancellationToken)
         {
-            using (var sqlConnection = new SqlConnection(_connectionString))
-            {
-                sqlConnection.Open();
-
-                var script = "SELECT Id, Description FROM Skills";
-
-                var skills = await sqlConnection.QueryAsync<SkillViewModel>(script);
-
-                return skills.ToList();
-
-                // COM EF CORE
-                //var skills = _dbContext.Skills;
-
-                //var skillsViewModel = skills
-                //    .Select(s => new SkillViewModel(s.Id, s.Description))
-                //    .ToList();
-
-                //return skillsViewModel;
-            }
+            return  await _skillrepository.GetAllAsync();
+            
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using iDev.Core.Entities;
+using iDev.Core.Repositories;
 using iDev.Infra.Persistence;
 using MediatR;
 using System;
@@ -11,17 +12,17 @@ namespace iDev.Application.Commands.CreateProject
 {
     public class CreateProjectCommandHandler : IRequestHandler<CreateProjectCommand, int>
     {
-        private readonly IDevDbContext _dbcontext;
-        public CreateProjectCommandHandler(IDevDbContext dbContext)
+        private readonly IProjectRepository _projectRepository;
+        public CreateProjectCommandHandler(IProjectRepository projectRepository)
         {
-            _dbcontext = dbContext;
+            _projectRepository = projectRepository;
         }
+
         public async Task<int> Handle(CreateProjectCommand request, CancellationToken cancellationToken)
         {
             var project = new Project(request.Title, request.Description, request.IdClient, request.IdFreelancer, request.TotalCost);
 
-            await _dbcontext.Projects.AddAsync(project);
-            await _dbcontext.SaveChangesAsync();
+            _projectRepository.AddProjectAsync(project);
 
             return project.Id;
         }

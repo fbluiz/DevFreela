@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using iDev.Application.Commands.StartProject;
+using iDev.Core.Repositories;
 using iDev.Infra.Persistence;
 using MediatR;
 using Microsoft.Data.SqlClient;
@@ -10,29 +11,18 @@ namespace iDev.Application.Commands.StartProject
 {
     public class StartProjectCommandHandler : IRequestHandler<StartProjectCommand, Unit>
     {
-        private readonly IDevDbContext _dbContext;
-        private readonly string _connectionString;
-        public StartProjectCommandHandler(IDevDbContext dbContext, IConfiguration configuration)
+        private readonly IProjectRepository _projectRepository_;
+        public StartProjectCommandHandler(IProjectRepository projectRepository_)
         {
-            _dbContext = dbContext;
-            _connectionString = configuration.GetConnectionString("iDevCS");
+            _projectRepository_ = projectRepository_;
         }
-
         public async Task<Unit> Handle(StartProjectCommand request, CancellationToken cancellationToken)
         {
-            var project = await _dbContext.Projects.SingleOrDefaultAsync(p => p.Id == request.Id);
+            var project = await _projectRepository_.GetByIdAsync(request.Id);
 
             project.Start();
-            // _dbContext.SaveChanges();
 
-            using (var sqlConnection = new SqlConnection(_connectionString))
-            {
-                sqlConnection.Open();
-
-                var script = "UPDATE Projects SET Status = @status, StartedAt = @startedat WHERE Id = @id";
-
-                sqlConnection.Execute(script, new { status = project.Status, startedat = project.StartedAt, request.Id });
-            }
+            await _projectRepository_.SaveChangesAsync();
 
             return Unit.Value;
         }

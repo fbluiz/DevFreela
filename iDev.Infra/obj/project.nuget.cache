@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Dw+pPwLZz6Msvlp7/nwZXTOau+M0HRTJ6+bV7coppPRsxFT+JOQSyl0RmhjLG75YwfC9GDrLzrnY0NmJTntT1Q==",
+  "dgSpecHash": "dJB/x8X8aTQhUioxZHCpLJCGrpEYv9f6TSkQMnbfWIhABykBeiIq8+Tz200xbVucncM+HYzWkzuSyLpfpWZ42g==",
   "success": true,
   "projectFilePath": "C:\\Users\\brson\\Documents\\VPProjects\\iDev API\\iDev API\\iDev.Infra\\iDev.Infra.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\brson\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\brson\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\brson\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\brson\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\brson\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\brson\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

@@ -1,4 +1,5 @@
 ﻿using iDev.Application.ViewModels;
+using iDev.Core.Repositories;
 using iDev.Infra.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -12,20 +13,20 @@ namespace iDev.Application.Queries.GetAllProjects
 {
     public class GetAllProjectsQueryHandler : IRequestHandler<GetAllProjectsQuery,List<ProjectViewModel>>
     {
-        private readonly IDevDbContext _dbContext;
+        private readonly IProjectRepository _projectRepository;
 
-        public GetAllProjectsQueryHandler(IDevDbContext dbContext)
+        public GetAllProjectsQueryHandler(IProjectRepository projectRepository)
         {
-            _dbContext = dbContext;
+            _projectRepository = projectRepository; 
         }
 
         public async Task<List<ProjectViewModel>> Handle(GetAllProjectsQuery request, CancellationToken cancellationToken)
         {
-            var projects = _dbContext.Projects;
+            var projects = await _projectRepository.GetAllAsync();
 
-            var projectsViewModel = await projects
+            var projectsViewModel = projects
                 .Select(c => new ProjectViewModel(c.Id, c.Title, c.CreatedAt))
-                .ToListAsync();
+                .ToList();
 
             return projectsViewModel;
         }
