@@ -1,9 +1,4 @@
 ﻿using iDev.Core.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace iDev.Core.Repositories
 {
@@ -14,7 +9,5 @@ namespace iDev.Core.Repositories
         Task AddCommentAsync(ProjectComment comment);
         Task AddProjectAsync(Project project);
         Task SaveChangesAsync();
-
-
     }
 }

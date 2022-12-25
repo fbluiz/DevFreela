@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "wD6n852CqqjQGP8prZ+f2zs/Jl2nfis0pNUn51n9KSyF8ywlMbQ2ri8pKVvcE7zCNRhppOarKPdxZioLnE5LWg==",
+  "dgSpecHash": "nzESru6Zz64CQERrDg03MWFdMeKES5UBHmtYMjK4c7PWTzJr6VtUPjr6IIHhZ7rYE2RqsogFM/O8LxXjPHjuQA==",
   "success": true,
   "projectFilePath": "C:\\Users\\brson\\Documents\\VPProjects\\iDev API\\iDev API\\iDev.Application\\iDev.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\brson\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\brson\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\brson\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\brson\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
     "C:\\Users\\brson\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\brson\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\brson\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

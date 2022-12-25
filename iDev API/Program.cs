@@ -2,17 +2,26 @@ using iDev.Infra.Persistence;
 using Microsoft.EntityFrameworkCore;
 using MediatR;
 using iDev.Application.Commands.CreateProject;
+using iDev.Application.Validators;
+using iDev.Core.Repositories;
+using iDev.Infra.Persistence.Repositories;
+using FluentValidation.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateUserCommandValidator>());
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var connectionString = builder.Configuration.GetConnectionString("iDevCs");
+builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ISkillRepository, SkillRepository>();
 builder.Services.AddDbContext<IDevDbContext>(options => options.UseSqlServer(connectionString));
 
 builder.Services.AddMediatR(typeof(CreateProjectCommand));
