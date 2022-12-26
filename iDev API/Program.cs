@@ -6,12 +6,13 @@ using iDev.Application.Validators;
 using iDev.Core.Repositories;
 using iDev.Infra.Persistence.Repositories;
 using FluentValidation.AspNetCore;
+using iDev_API.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers()
+builder.Services.AddControllers(options => options.Filters.Add(typeof(ValidationFilter)))
     .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateUserCommandValidator>());
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
