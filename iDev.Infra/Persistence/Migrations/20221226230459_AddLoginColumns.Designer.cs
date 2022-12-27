@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using iDev.Infra.Persistence;
 
@@ -11,9 +12,11 @@ using iDev.Infra.Persistence;
 namespace iDev.Infra.Migrations
 {
     [DbContext(typeof(IDevDbContext))]
-    partial class IDevDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221226230459_AddLoginColumns")]
+    partial class AddLoginColumns
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -7,6 +7,8 @@ using iDev.Core.Repositories;
 using iDev.Infra.Persistence.Repositories;
 using FluentValidation.AspNetCore;
 using iDev_API.Filters;
+using iDev.Core.Services;
+using iDev.Infra.Auth;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,10 +22,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var connectionString = builder.Configuration.GetConnectionString("iDevCs");
+builder.Services.AddDbContext<IDevDbContext>(options => options.UseSqlServer(connectionString));
+
 builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ISkillRepository, SkillRepository>();
-builder.Services.AddDbContext<IDevDbContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddScoped<IAuthService, AuthService>();
+
 
 builder.Services.AddMediatR(typeof(CreateProjectCommand));
 

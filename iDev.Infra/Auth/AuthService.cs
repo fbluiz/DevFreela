@@ -15,6 +15,23 @@ namespace iDev.Infra.Auth
         {
             _configuration = configuration;
         }
+
+        public string ComputerSha256Hash(string password)
+        {
+            using (SHA256 SHA256Hash = SHA256.Create())
+            {
+                byte[] bytes = SHA256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
+
+                StringBuilder builder = new StringBuilder();
+                for(int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+
+                return builder.ToString();
+            }
+        }
+
         public string GenerateJwtToken(string email, string role)
         {
             var issuer = _configuration["Jwt:Issuer"];

@@ -1,27 +1,26 @@
 ﻿using iDev.Core.Entities;
 using iDev.Core.Repositories;
+using iDev.Core.Services;
 using iDev.Infra.Persistence;
-using iDev.Infra.Persistence.Repositories;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace iDev.Application.Commands.CreateUser
 {
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand,int>
     {
         private readonly IUserRepository _userRepository;
-        public CreateUserCommandHandler(IUserRepository userRepository)
+        private readonly IAuthService _authService;
+        public CreateUserCommandHandler(IUserRepository userRepository, IAuthService authService)
         {
             _userRepository = userRepository;
+            _authService = authService;
         }
 
         public async Task<int> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
-            var user = new User(request.FullName, request.Email, request.BirthDate);
+            var passwordHash = _authService.ComputerSha256Hash(request.Password);    
+            var user = new User(request.FullName, request.Email, request.BirthDate, passwordHash, request.Role);
 
             await _userRepository.AddUserAsync(user);
             
