@@ -6,5 +6,6 @@ namespace iDev.Core.Repositories
     {
         Task<User> GetUserByIdAsync(int id);
         Task AddUserAsync(User user);
+        Task<User> GetUserByEmailAndPasswordAsynnc(string email, string passwordHash);
     }
 }

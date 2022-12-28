@@ -8,26 +8,25 @@ namespace iDev.Application.Validators
     {
         public CreateUserCommandValidator()
         {
-            RuleFor(P => P.Email)
+            RuleFor(p => p.Email)
                 .EmailAddress()
-                .WithMessage("E-mail não válido");
+                .WithMessage("E-mail não válido!");
 
-            RuleFor(P => P.Password)
-                .Must(ValidPasseord)
-                .WithMessage("senha deve conter pelo menos 8 caracteres e possui pelo menos uma letra e um número.");
+            RuleFor(p => p.Password)
+                .Must(ValidPassword)
+                .WithMessage("Senha deve conter pelo menos 8 caracteres, um número, uma letra maiúscula, uma minúscula, e um caractere especial");
 
             RuleFor(p => p.FullName)
                 .NotEmpty()
                 .NotNull()
-                .WithMessage("Nome é Obrigatório");
+                .WithMessage("Nome é obrigatório!");
         }
 
-        public bool ValidPasseord(string password)
+        public bool ValidPassword(string password)
         {
             var regex = new Regex(@"^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!*@#$%^&+=]).*$");
 
             return regex.IsMatch(password);
         }
-        
     }
 }

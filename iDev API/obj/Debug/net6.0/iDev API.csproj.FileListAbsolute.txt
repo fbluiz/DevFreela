@@ -93,3 +93,4 @@ C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev API\bin\Debug\net6.0\
 C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev API\bin\Debug\net6.0\FluentValidation.dll
 C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev API\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\brson\Documents\VPProjects\iDev API\iDev API\iDev API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

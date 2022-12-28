@@ -19,6 +19,13 @@ namespace iDev.Infra.Persistence.Repositories
             await _dbcontext.SaveChangesAsync();
         }
 
+        public async Task<User> GetUserByEmailAndPasswordAsynnc(string email, string passwordHash)
+        {
+            return await _dbcontext
+                .Users
+                .SingleOrDefaultAsync(u => u.Email == email && u.Password == passwordHash);
+        }
+
         public async Task<User> GetUserByIdAsync(int id)
         {
             return await _dbcontext.Users.SingleOrDefaultAsync(u => u.Id == id);
