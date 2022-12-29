@@ -27,8 +27,4 @@
     <ProjectReference Include="..\iDev.Core\iDev.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Application\Commands\" />
-  </ItemGroup>
-
 </Project>
