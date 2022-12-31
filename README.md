@@ -11,9 +11,8 @@
 
 ## 💻 Sobre o projeto
 
-DevFreela - plataforma para cadastro e contratação de freelance de desenvolvedores
-
-Projeto sendo desenvolvido durante a formação ASP.NET Core - Direto ao Ponto oferecida pelo LuisDev.
+API completa para implementar as funcionalidades necessárias para um sistema de cadastro
+e contratação de serviços de FreeLance de desenvolvedores
 
 ---
 
