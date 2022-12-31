@@ -21,7 +21,7 @@ e contratação de serviços de FreeLance de desenvolvedores
 - [x] Cadastro, Atualização, Cancelamento e Consulta de Serviço de Freelance
 - [x] Cadastro de Usuário e de perfis Freelancer e Client
 - [x] Adicionar comentários para um serviço de Freelance
-- [x] Definir, Iniciar e fializar projeto
+- [x] Definir, Iniciar e finalizar projeto
 
 ---
 
