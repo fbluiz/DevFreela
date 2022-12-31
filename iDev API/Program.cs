@@ -13,6 +13,7 @@ using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using iDev.Infra.Payments;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -59,7 +60,10 @@ builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ISkillRepository, SkillRepository>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IPaymentService,PaymentService>();
 
+
+builder.Services.AddHttpClient();
 
 builder.Services.AddMediatR(typeof(CreateProjectCommand));
 
